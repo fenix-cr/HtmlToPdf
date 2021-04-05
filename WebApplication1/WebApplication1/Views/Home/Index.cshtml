@@ -1,0 +1,186 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Page with text,image and CSS to PDF</title>
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <style type="text/css">
+        #text {
+            max-width: 90%;
+            width: 90%;
+            text-align: center;
+            margin: 10px;
+            border: 5px solid orange;
+            background: whitesmoke;
+        }
+
+            #text h2 {
+                background: orange;
+                color: white;
+            }
+
+        #btn {
+            padding: 10px;
+            border: 0px;
+            margin: 50px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    @using (Html.BeginForm("GenerarReporte", "Home", FormMethod.Post))
+    {
+        <input type="radio" id="print_NReco" name="opcion" value="print_NReco">
+        <label for="">NReco</label>
+        <input type="radio" id="print_iText7" name="opcion" value="print_iText7">
+        <label for="">iText7</label>
+        <input type="radio" id="print_PdfSharp" name="opcion" value="print_PdfSharp">
+        <label for="">PdfSharp</label>
+        <input type="radio" id="print_SelectPdf" name="opcion" value="print_SelectPdf">
+        <label for="">SelectPdf</label>
+        <input type="radio" id="print_TheArtOfDev" name="opcion" value="print_TheArtOfDev">
+        <label for="">TheArtOfDev</label>
+
+        <input type="hidden" id="htmlcode" name="htmlcode" />
+        <button id="btn">Generar pdf</button>
+    }
+
+
+
+    <div id="imprimir">
+        <div id="text">
+            <img width="150px" height="150px" src="https://a.storyblok.com/f/89778/1168x728/b7082a9dd9/cr_00_00_2.jpeg" alt="Italian Trulli">
+            <br>
+            <iframe width="300px" height="200px" src="https://www.youtube.com/embed/vIcDqs5GLNw">
+            </iframe>
+            <iframe width="300px" height="200px" src="https://www.youtube.com/embed/Dbd0KtGE3JM">
+            </iframe>
+
+            <h2>Introduction</h2>
+            <p class="text-normal">
+                The order in which commands to download external Cascading Style Sheets (CSS) files
+                and JavaScript files are placed in an HTML page can affect how quickly the page is rendered and even
+                whether the page is rendered at all.
+            </p>
+            <p class="text-normal" style="color: red;background: black;">
+                When a CSS file is loaded before a JavaScript file, the page can
+                begin rendering and
+                the file downloads can happen in parallel which speeds up the rendering time.
+            </p>
+            <h2 style="background: black;">Background</h2>
+            <h2>The Issue</h2>
+            <p class="text-normal">
+                Script files (such as JavaScript) are loaded sequentially unless asynchronous
+                downloading is specified (for more information, see Asynchronous Load of JavaScript in HTML). Sequential
+                (synchronous) download means that the entire script file must be downloaded before any other files can
+                be downloaded and before any other instructions on the page, such as inline code or HTML, can be
+                executed.
+            </p>
+            <p class="text-normal">
+                Another issue that can occur when a JavaScript file is loaded before a CSS file, is
+                that any JavaScript code which relies on properties set in that CSS file can't be executed until both
+                files have finished loading.
+            </p>
+            <h2>Best Practice Recommendation</h2>
+            <p class="text-normal">
+                The Best Practice Recommendation is to download CSS before script files, and to move
+                SCRIPT tags to the bottom of the page whenever possible.
+            </p>
+            <p class="text-normal">
+                The AT&amp;T Application Resource Optimizer (ARO) can help you identify this
+                potential file order problem. AT&amp;T ARO tests the HTML documents in your app and if a JavaScript file
+                is loaded before a CSS file in the HEAD of an HTML document, the test fails and the name of the file is
+                listed in the rest results.
+            </p>
+            <p class="text-normal">
+                Another issue that can occur when a JavaScript file is loaded before a CSS file, is
+                that any JavaScript code which relies on properties set in that CSS file can't be executed until both
+                files have finished loading.
+            </p>
+            <h2>Best Practice Recommendation</h2>
+            <p class="text-normal">
+                The Best Practice Recommendation is to download CSS before script files, and to move
+                SCRIPT tags to the bottom of the page whenever possible.
+            </p>
+            <p class="text-normal">
+                The AT&amp;T Application Resource Optimizer (ARO) can help you identify this
+                potential file order problem. AT&amp;T ARO tests the HTML documents in your app and if a JavaScript file
+                is loaded before a CSS file in the HEAD of an HTML document, the test fails and the name of the file is
+                listed in the rest results.
+            </p>
+            <p class="text-normal">
+                Another issue that can occur when a JavaScript file is loaded before a CSS file, is
+                that any JavaScript code which relies on properties set in that CSS file can't be executed until both
+                files have finished loading.
+            </p>
+            <h2>Best Practice Recommendation</h2>
+            <p class="text-normal">
+                The Best Practice Recommendation is to download CSS before script files, and to move
+                SCRIPT tags to the bottom of the page whenever possible.
+            </p>
+            <p class="text-normal">
+                The AT&amp;T Application Resource Optimizer (ARO) can help you identify this
+                potential file order problem. AT&amp;T ARO tests the HTML documents in your app and if a JavaScript file
+                is loaded before a CSS file in the HEAD of an HTML document, the test fails and the name of the file is
+                listed in the rest results.
+            </p>
+            <p class="text-normal">
+                Another issue that can occur when a JavaScript file is loaded before a CSS file, is
+                that any JavaScript code which relies on properties set in that CSS file can't be executed until both
+                files have finished loading.
+            </p>
+            <h2>Best Practice Recommendation</h2>
+            <p class="text-normal">
+                The Best Practice Recommendation is to download CSS before script files, and to move
+                SCRIPT tags to the bottom of the page whenever possible.
+            </p>
+            <p class="text-normal">
+                The AT&amp;T Application Resource Optimizer (ARO) can help you identify this
+                potential file order problem. AT&amp;T ARO tests the HTML documents in your app and if a JavaScript file
+                is loaded before a CSS file in the HEAD of an HTML document, the test fails and the name of the file is
+                listed in the rest results.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</body>
+
+
+</html>
+
+<script>
+
+
+    var htmlCode = "<head>" + $("head").html() + "</head>";
+    htmlCode += "<body>" + $("#imprimir").html() + "</body>";
+
+    $("#htmlcode").val(htmlCode);
+
+
+    //function printHtml(title, elementId) {
+    //    const pdfWindow = window.open('', 'PRINT', 'height=650,width=900,top=100,left=150');
+
+    //    var htmlCode = "<head>" + $("head").html() + "</head>";
+    //    htmlCode += "<body>" + $("#imprimir").html() + "</body>";
+
+    //    pdfWindow.document.write(htmlCode);
+
+
+    //    pdfWindow.document.close();
+    //    pdfWindow.focus();
+
+    //    pdfWindow.print();
+    //    pdfWindow.close();
+    //}
+
+
+</script>
