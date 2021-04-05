@@ -2,8 +2,6 @@
 using iTextSharp.text.html.simpleparser;
 using iTextSharp.text.pdf;
 using SelectPdf;
-using IronPdf;
-using Syncfusion.HtmlConverter;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -37,9 +35,6 @@ namespace WebApplication1.Controllers
                 case "print_iText7":
                     print_iText7(htmlcode);
                     break;
-                case "print_IronPdf":
-                    print_IronPdf(htmlcode);
-                    break;
                 case "print_PdfSharp":
                     print_PdfSharp(htmlcode);
                     break;
@@ -66,18 +61,6 @@ namespace WebApplication1.Controllers
                 RetornarPdf(res);
             }
 
-        }
-
-        //IronPdf no sirve hay q pagar
-        private void print_IronPdf(String htmlcode)
-        {
-            var Renderer = new IronPdf.HtmlToPdf();
-
-            var PDF = Renderer.RenderHtmlAsPdf(htmlcode);
-            //return a pdf document from a view
-
-            var res = PDF.BinaryData;
-            RetornarPdf(res);
         }
 
         //NReco
